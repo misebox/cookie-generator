@@ -51,7 +51,7 @@ class CookieGenerator {
     const prods = Game.ObjectsById.map(p => {
       let cps = p.cps(p);
       return {
-        id: p.id,
+        name: p.name,
         cps,
         price: p.bulkPrice,
         elm: p.l,
