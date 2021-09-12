@@ -3,6 +3,7 @@ class CookieGenerator {
   // Show Ranking
   rank() {
     const prods = this.getProducts();
+    console.clear();
     console.table(prods.slice(0, 5));
   }
 
@@ -45,6 +46,8 @@ class CookieGenerator {
     this.timers.shimmer = setInterval(clickGoldenCookie, 3000);
     // Coninue rapidly clicking Big Cookie
     this.timers.clickBigCookie = setInterval(clickBigCookie, 0);
+    // 
+    this.timers.showRanking = setInterval(() => {this.rank()}, 10000);
   }
 
   getProducts() {
